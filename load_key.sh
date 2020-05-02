@@ -1,13 +1,10 @@
 #/bin/bash
 
+#Expected arguments: ./load_key.sh key_name
+
 mkdir ~/.ssh
-
-cp ./id_rsa ~/.ssh/id_rsa_1
-chmod 0600 ~/.ssh/id_rsa_1
-cp ./id_rsa.pub ~/.ssh/id_rsa_1.pub
-
-#eval "$(ssh-agent -s)"
-
+cp ./id_rsa ~/.ssh/"$1"
+chmod 0600 ~/.ssh/"$1"
+cp ./id_rsa.pub ~/.ssh/"$1".pub
 eval `ssh-agent`
-
-ssh-add ~/.ssh/id_rsa_1
+ssh-add ~/.ssh/"$1"
