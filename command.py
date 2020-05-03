@@ -10,7 +10,7 @@ PRV_KEY="id_rsa"
 USER="ivlin"
 REPO="commtest"
 MAX_MSG_LEN = 50 #determined by the max commit length
-MAX_FILESIZE = 800
+MAX_FILESIZE = 800	
 
 def fetch_keys(server_name):
 	""" Downloads the keys from the server using the get_https_file command. For  """
@@ -42,6 +42,22 @@ def get_https_file(url, fname):
 def send_https_file(file, dest, resolver):
 	""" Sends a post request with file as the body. DNS done through HTTPS. """
 	subprocess.run(["bash","doh_send.sh", file, dest, resolver]) #Can't call the command directly from python for some reason
+
+def send(body, is_file=False):
+	""" Based on network conditions, choose an appropriate way to transmit a message """
+	if False:
+		send_commit_message(body)
+	elif False:
+		send_git_file()
+	elif False:
+		send_https_file()
+	pass
+
+def recv(remote_url):
+	""" Based on network conditions, choose an appropriate way to send the file """
+	if False:
+		get_https_file()
+	pass
 
 if __name__=="__main__":
 	send_git_file("test.json")
