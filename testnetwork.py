@@ -13,21 +13,21 @@ Git_threshold = 50
 POLL_TIME = 20
 INTERFACE = "eth0"
 
-def main(argv):
+def test_network(argv):
     """ Analyze the network for Firefox DoH and Github Traffic """
     """ Returns 1 if Firefox Doh Traffic meets threshold """
     """ Returns 2 if Github traffic meets threshold and DoH traffic did not """
     """ Returns -1 if both thresholds are failed """
     bpf = create_bpf_filter(FF_IP_PATH)
     sniff_packets(INTERFACE, bpf, addFFcount)
+    if(FFDoH_counter > FFDoH_threshold):
+        return(1)
 
     bpf = create_bpf_filter(GIT_IP_PATH)
     sniff_packets(INTERFACE, bpf, addGitcount)
-
-    if(FFDoH_counter > FFDoH_threshold):
-        return(1)
     if(Git_counter > Git_threshold):
         return(2)
+    
     return(-1)
 
 def create_bpf_filter(path):
@@ -58,4 +58,4 @@ def addGitcount(pkt):
     #print("Git count: " + str(Git_counter))
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    test_network(sys.argv[1:])
