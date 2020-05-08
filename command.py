@@ -54,7 +54,8 @@ def send_https_file(file, dest, resolver):
 
 def send(body, is_file=False):
 	""" Based on network conditions and msg size, choose an appropriate way to transmit a message """
-	
+	#subprocess.run(["python3", "testnetwork.py"]) 
+
 	if False:
 		send_commit_message(body)
 	elif False:
