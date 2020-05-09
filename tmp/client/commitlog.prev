@@ -1,221 +1,140 @@
-commit 97d474f85b5c35f24ccd06b19ef88b2b87349fa5
+commit 22861b274072accb4e532578524b75c2336d263d
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 18:01:52 2020 -0400
+Date:   Sat May 9 00:22:07 2020 -0400
 
-    Makefile
+    test.json
 
-commit 226c768ca445f4814b882a800bf554bd56e45684
+commit 73539171b157cb33c2222f16e329fd1588863ab8
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 18:01:48 2020 -0400
+Date:   Sat May 9 00:20:07 2020 -0400
 
-    Goodbye
+    test.json
 
-commit c837fc2abe5cfac95ceea3eab2ff587d451a3f57
+commit 7ba71d1db32c3f3421320a1252ae54ff4e96a3dd
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 18:00:21 2020 -0400
+Date:   Fri May 8 20:06:02 2020 -0400
 
-    command.py
+    README changed
 
-commit 76d3280ad7e68b59b9a875fd97769b2ebf7bb02e
+commit d1d4500c3a7ed6cd37bc90e9ca38f457dc0d4211
+Author: Ivan Lin <ivlin112@gmail.com>
+Date:   Fri May 8 18:28:51 2020 -0400
+
+    Update README.md
+
+commit fce840d8b5d79757face74ab8ce4dee75eae4516
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 18:00:17 2020 -0400
+Date:   Fri May 8 11:55:42 2020 -0400
+
+    Simple client for demo
+
+commit c0c9493c48292f1ef81690e6f5201d6b22f40c3b
+Author: NPradlik <56689911+NPradlik@users.noreply.github.com>
+Date:   Fri May 8 06:11:12 2020 -0400
+
+    Update testnetwork.py
+
+commit a6d0332bc8ed7a5bc6a80b3511aea191e44994af
+Author: NPradlik <56689911+NPradlik@users.noreply.github.com>
+Date:   Fri May 8 05:32:44 2020 -0400
+
+    code for testing current network traffic
+
+commit b2342edac74a92efd6ac9e18d98967f624d0fafb
+Merge: 87da194 83dd572
+Author: ivlin <ivlin112@gmail.com>
+Date:   Tue May 5 16:34:04 2020 -0400
+
+    Merge branch 'git_transmission'
+
+commit 83dd5728414ce893bea72bace49065b7f680e70c
+Author: ivlin <ivlin112@gmail.com>
+Date:   Tue May 5 16:33:48 2020 -0400
+
+    Working on potentially pulling messages in the form of git commits or a git file
+
+commit 6493934a117e042b8bd5eabaad8fa86771ec4f7c
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 20:44:14 2020 -0400
+
+    Skeleton for control directions
+
+commit aaa8fba6003a8e047ba2f96e8a614242087d2b3b
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 20:37:08 2020 -0400
+
+    Upload file to git
+
+commit 87da19467d1a51ca225072d10a590c05df476731
+Merge: 7a2371e 564108f
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 16:00:52 2020 -0400
+
+    Merge branch 'master' of github.com:ivlin/cse363c-and-c
+
+commit 7a2371e2bcf29587d72fb163c666dd391df764cf
+Merge: d7ffb1e ff8966c
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 16:00:45 2020 -0400
+
+    Merge branch 'git_transmission'
+
+commit ff8966cd0091c9fccda4094b1c69060f61ad3431
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 16:00:32 2020 -0400
+
+    Wrote commands for getting and posting data through HTTPS with DoH
+
+commit 5ed8b7c85855bd8acb7511d30c389f727c43b2e2
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 15:24:14 2020 -0400
+
+    Included scripts for downloading and loading the rsa keys for git
+
+commit 564108f9599af6997c79bdfaeaac570f6a7a92b2
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 14:35:42 2020 -0400
 
     Hello
 
-commit 80d453bdfeb774c09379a6f1375f7418deb1e0e1
+commit d7ffb1eca2f27e2463f2ea762e1facc98984f48f
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:52:24 2020 -0400
+Date:   Sat May 2 14:33:17 2020 -0400
 
-    command.py
+    Added file used for communication of short messages through commits
 
-commit 5502f9245dea831bdb996b228a1ac6aa41b27a11
+commit d81cba5701ffd7b7accd1fc3bfe8cc01dabb9bd9
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:52:21 2020 -0400
+Date:   Sat May 2 14:31:26 2020 -0400
 
-    Hello
+    Commlog for communication simulation
 
-commit 75f9b7cf89487410b697915134f4cf00c20e611b
+commit ad619091a062324377564640b73ae429822185e2
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:51:23 2020 -0400
+Date:   Sat May 2 14:30:31 2020 -0400
 
-    test.json
+    Simple bash scripts for transmitting a short msg through the commit
 
-commit 58bd8e62cbd4a7d75c9f31898844f0250a72025e
+commit 4c9beee3421a89b196781aebf0fcf43c68b0e567
 Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:51:20 2020 -0400
+Date:   Sat May 2 13:10:59 2020 -0400
 
-    Test
+    File for general description on git transmission
 
-commit b76da9a5289fe9e15afdd9cec2451886a133ae66
+commit 67f36d6311c319164db6b51d70c315da35275148
+Author: ivlin <ivlin112@gmail.com>
+Date:   Sat May 2 13:09:58 2020 -0400
+
+    Created simple script for adding an ssh key
+
+commit 4ae33d2b74b5b7f2027b3d0bea962526bad5a274
+Author: ivlin <ivlin112@gmail.com>
+Date:   Wed Apr 29 13:28:02 2020 -0400
+
+    Minor readme changes
+
+commit ad100978d1886c90450f34816c9613a6b2f2be81
 Author: Ivan Lin <ivlin112@gmail.com>
-Date:   Fri May 8 17:44:17 2020 -0400
-
-    Delete test.json
-
-commit 787a2fffd92c138382f41087b1d684df3f797f92
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:33:08 2020 -0400
-
-    test.json
-
-commit fea26581d9adbb63f41b9938e9daa058af95c878
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:33:05 2020 -0400
-
-    Test
-
-commit 6953868c4375b6f28efdd1e611cf775a1a3e5a2f
-Author: Ivan Lin <ivlin112@gmail.com>
-Date:   Fri May 8 17:27:44 2020 -0400
-
-    Delete test.json
-
-commit 7ab8e0e024b2d581ac20d5e90972774caf1a32f2
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:23:39 2020 -0400
-
-    Test
-
-commit 898912f687237f776b0e900822d54585359138dd
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 17:03:16 2020 -0400
-
-    Test
-
-commit 64fe56ca38afb548be18f35812815597da9d095b
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 12:36:14 2020 -0400
-
-    Test
-
-commit 4942772c88689ec25bcf9413dcc8f7d62ee32d17
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 12:33:41 2020 -0400
-
-    Test
-
-commit 77d95622e18dd40a4c4d74f8b4cd5f97d014fc7e
-Author: ivlin <ivlin112@gmail.com>
-Date:   Fri May 8 11:53:37 2020 -0400
-
-    Test
-
-commit 485c4c6be5b19e25bd853be5f7ddf038f5355ec8
-Author: ivlin <ivlin112@gmail.com>
-Date:   Tue May 5 15:13:43 2020 -0400
-
-    added hello
-
-commit 3e42bc9ad084251e306dca516097e7059c5392df
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 20:36:50 2020 -0400
-
-    test.json
-
-commit 61b2e05c825cb781283acfd8912d29f30a9fb27d
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:20 2020 -0400
-
-    amcorper odio, non sodales urna mollis et.
-
-commit 53552cdcb92481871399225fc0f4be1600d9a355
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:17 2020 -0400
-
-    lobortis elit sed euismod cursus. Morbi tempor ull
-
-commit b82db49f5b7c2dc427ff4e37afb3370ec5d61d7e
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:14 2020 -0400
-
-    unc pretium suscipit eros imperdiet sodales. Cras
-
-commit 560500d172a4e9853785c096138d42a48ac631d2
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:11 2020 -0400
-
-     maximus iaculis tincidunt vel, pharetra a elit. N
-
-commit ae42f7b6a1792e7e20f9eb9e58826598ffcf05d6
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:09 2020 -0400
-
-    , eu convallis metus fringilla. Fusce velit augue,
-
-commit b882221c0127a06e9f14e8c00ef763247a51a48e
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:06 2020 -0400
-
-    t ligula. Morbi tincidunt elit quis quam dignissim
-
-commit 0288c9c1069b7d41d6c6e34c7fa649a47de6e3b0
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 15:00:01 2020 -0400
-
-    rbi dolor urna, pharetra et posuere ut, accumsan u
-
-commit dfd6e819f2231b33bb3ee03782fc83152a11cf05
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:58 2020 -0400
-
-    agna. Phasellus tempus dui ac posuere ultrices. Mo
-
-commit 9b0ef62b0642bbfa32112343f9f01388bca0e450
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:55 2020 -0400
-
-    maximus dolor diam nec magna. Nullam eu volutpat m
-
-commit 2cb06dad6f99843376b92a6640d27da81295a4ef
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:53 2020 -0400
-
-    sque facilisis, tortor sapien gravida orci, vitae
-
-commit 6ab89101c9dbce22b8658b3a120bcc6a653b77bf
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:50 2020 -0400
-
-    im ullamcorper. Nullam placerat, risus in pellente
-
-commit 45ca9f9577611cb56f58f82e6502262947d107bb
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:47 2020 -0400
-
-    , sollicitudin commodo leo. Quisque tempus digniss
-
-commit fbf0cbb2ffce9c73c16e9ea2291b28fa1d0960a5
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:44 2020 -0400
-
-    g elit. Nulla ex magna, tincidunt at massa viverra
-
-commit 27cbb476035a191a16a8cbfc047d6386a0656b9e
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:41 2020 -0400
-
-     Lorem ipsum dolor sit amet, consectetur adipiscin
-
-commit aa4a556a4e3f9e3f10faaa1d5a83ce4521790c94
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:59:06 2020 -0400
-
-    hello
-
-commit 8ffa24f862a15bc48e521c56cfa8af9df1639100
-Author: ivlin <ivlin112@gmail.com>
-Date:   Sat May 2 14:58:40 2020 -0400
-
-    wassup
-
-commit 147f45ed082ddd4b721ffa217180e0ed4d06c298
-Author: Ivan Lin <ivlin112@gmail.com>
-Date:   Sat May 2 14:44:43 2020 -0400
-
-    Create commlog
-
-commit 6961f89f8378a35aeace017067b61a6672f6ea10
-Author: Ivan Lin <ivlin112@gmail.com>
-Date:   Sat May 2 14:44:26 2020 -0400
+Date:   Wed Apr 29 12:23:55 2020 -0400
 
     Initial commit
