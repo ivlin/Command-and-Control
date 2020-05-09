@@ -4,6 +4,8 @@
 
 cd /tmp
 git clone git@github.com:"$1"/"$2"
+cd -
+cd /tmp/"$2"
 git log > commitlog
 cd -
 cp /tmp/"$2"/commitlog .

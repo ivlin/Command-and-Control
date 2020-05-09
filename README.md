@@ -2,6 +2,10 @@
 
 Ivan Lin, Nicholas Pradlik
 
+## Demo
+
+Due to technical difficulties, there are significant issues with playback of the first video past the 3:30 mark. There are audio cutouts from the first video after 3:00 and minor breaks in audio in the second video. However, the video is able to display running the code.
+
 ## Description
 
 Covert command-and-control software meant to allow infected machines to communicate with an external server.
@@ -26,14 +30,14 @@ Receive data with HTTPS.
 
 send - calls testnetwork to check network conditions and makes a decision based on the output
 
-send_git_commit -> uploads a message in the form of multiple commits
-send_git_file -> uploads a message as a file to the git repo
-send_https_file -> sends a file as a https post using (DoH, HTTPS)
+send_git_commit(msg) -> uploads a message in the form of multiple commits
+send_git_file(fname) -> uploads a file with name fname as a file to the git repo
+send_https_file(file, dest, resolver) -> sends a file as a https post to a destination using a specified resolver endpoint(DoH, HTTPS)
 
 recv - chooses one of the get methods - if None is passed as argument, pull the commit log, else get the url passed as an argument
 
-get_https_file -> downloads the file at a url (DoH, HTTPS)
-get_git_commits -> Downloads the commit log and saves it as commitlog in the working directory
+get_https_file(url) -> downloads the file at a url (DoH, HTTPS)
+get_commit_message() -> Downloads the commit log and saves it as commitlog in the working directory
 
 ### Server
 

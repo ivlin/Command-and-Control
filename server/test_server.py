@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 symmetric_key=None
 crypt=None
-email="example@gmail.com"
+email="ivlin@gmail.com"
 
 def generate_keys():
     with open("keys/symmetric_key", "wb") as symmetric_key_f:
@@ -49,6 +49,9 @@ try:
 except:
 	print("Generating new keys")
 	generate_keys()
+	with open("keys/symmetric_key", "rb") as symmetric_key_f:
+		symmetric_key = symmetric_key_f.read()
+		crypt=Fernet(symmetric_key)
 
 if __name__ == '__main__':
     app.run()

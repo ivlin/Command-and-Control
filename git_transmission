@@ -1,7 +1,0 @@
-The idea of this feature is for allowing communication.
-
-The private key is downloaded via HTTPS and DoH.
-
-Small communication can take the form of github commit messages.
-
-If needed, larger files can be uploaded.
