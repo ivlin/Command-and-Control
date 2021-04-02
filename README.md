@@ -1,14 +1,6 @@
-# cse363c-and-c
+# Git-based Command and Control
 
 Ivan Lin, Nicholas Pradlik
-
-## Demo
-
-Due to technical difficulties, there are significant issues with playback of the first video past the 3:30 mark. There are audio cutouts from the first video after 3:00 and minor breaks in audio in the second video. However, the video is able to display running the code.
-
-## Description
-
-Covert command-and-control software meant to allow infected machines to communicate with an external server.
 
 ## Demo
 
